@@ -1,10 +1,8 @@
-import {CategoryEnum} from './category.enum';
-
 export interface Food {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-  category: CategoryEnum;
-  price: number;
+    id?:number;
+    name:string;
+    descripcion:string;
+    image:string;
+    category: string;
+    price:number;
 }

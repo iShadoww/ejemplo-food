@@ -2,7 +2,7 @@
   <button (click)="open()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>App Food</span>
+  <span>My App</span>
   <span class="flex-auto"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -11,22 +11,22 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
-<!-- CONTENEDOR Y SIDENAV -->
+<!--   CONTENEDOR Y SIDEBAR   -->
 <mat-drawer-container class="w-full h-full">
-  <mat-drawer mode="side" [opened]="opened" class="w-80 px-2 pt-16">
-    <!-- MENU DE OPCIONES -->
+  <mat-drawer mode="side" [opened]="opened" class="w-70 px-2 pt-16">
+    <!--   MENÚ DE OPCIONES   -->
     <mat-list>
       @for (link of links; track link) {
         <mat-list-item [routerLink]="link.routerLink">
-          <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
-          <h3 matListItemTitle>{{ link.label }}</h3>
+          <mat-icon matListItemIcon>{{link.icon}}</mat-icon>
+          <h3 matListItemTitle>{{link.label}}</h3>
         </mat-list-item>
       }
-    </mat-list>
-
+    </mat-list>  
   </mat-drawer>
   <mat-drawer-content class="p-10">
-    <!-- RUTAS -->
+    <!--  RUTAS  -->
     <ng-content></ng-content>
   </mat-drawer-content>
 </mat-drawer-container>
+
